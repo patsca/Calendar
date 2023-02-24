@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mycontactlist.ContactSettingsActivity">
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navbar_background"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonMap"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/button_to_display_maps"
+            app:srcCompat="@android:drawable/ic_dialog_map"
+            tools:ignore="RedundantDescriptionCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/button_to_display_settings"
+            app:srcCompat="@android:drawable/ic_menu_manage" />
+
+        <ImageButton
+            android:id="@+id/imageButtonList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/button_to_display_contacts"
+            app:srcCompat="@android:drawable/ic_menu_my_calendar"
+            tools:ignore="SpeakableTextPresentCheck,RedundantDescriptionCheck" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sortContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Sort Contacts By:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sortContacts">
+
+        <RadioButton
+            android:id="@+id/radioName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name" />
+
+        <RadioButton
+            android:id="@+id/radioCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CIty" />
+
+        <RadioButton
+            android:id="@+id/radioBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Birthday" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/sortOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Sort Order:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupSortBy" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSortOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sortOrder" >
+
+        <RadioButton
+            android:id="@+id/radioAscending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ascending" />
+
+        <RadioButton
+            android:id="@+id/radioDescending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descending" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
