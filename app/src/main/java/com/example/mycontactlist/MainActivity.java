@@ -35,6 +35,8 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements com.example.mycontactlist.DatePicker.SaveDateListener {
 
+    //hi
+
     private Contact currentContact;
     final int PERMISSION_REQUEST_PHONE = 102;
     final int PERMISSION_REQUEST_CAMERA = 103;
