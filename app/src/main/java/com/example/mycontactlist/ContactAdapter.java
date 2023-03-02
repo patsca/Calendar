@@ -31,8 +31,8 @@ public class ContactAdapter extends RecyclerView.Adapter {
         public TextView textState;
         public TextView textCity;
         public TextView textZip;
-
         public Button deleteButton;
+
         public ContactViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewContact = itemView.findViewById(R.id.textContactName);
